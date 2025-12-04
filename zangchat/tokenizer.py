@@ -75,7 +75,7 @@ class HuggingFaceTokenizer:
     
     def get_special_tokens(self):
         special_tokens_map = self.tokenizer.get_added_tokens_decoder()
-        special_tokens = [w.content for w in special_tokens_map.value()] #不加这个content，结果就是：AddedToken("<|bos|>")
+        special_tokens = [w.content for w in special_tokens_map.values()] #不加这个content，结果就是：AddedToken("<|bos|>")
         return special_tokens 
     
     def id_to_token(self,id):

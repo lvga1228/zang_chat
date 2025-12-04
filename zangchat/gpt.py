@@ -19,9 +19,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from nanochat.common import get_dist_info, print0
-from nanochat.muon import Muon, DistMuon
-from nanochat.adamw import DistAdamW
+# from nanochat.common import get_dist_info, print0
+# from nanochat.muon import Muon, DistMuon
+# from nanochat.adamw import DistAdamW
 
 class GPT_Config:
     sequence_len :int =1024
@@ -150,7 +150,7 @@ class GPT(nn.Module):
         
         channel_range = torch.arange(0,head_dim,2,dtype=torch.float32,device=device)     #深度学习一般使用float32
         inv_freq = 1.0/(base ** (channel_range/head_dim))
-        t = torch.arange(seq_len,step=1,dtype=torch.float32,device=device)
+        t = torch.arange(seq_len,dtype=torch.float32,device=device)
         fres = torch.outer(t,inv_freq)
         cos=fres.cos()
         sin =fres.sin()
