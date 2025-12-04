@@ -18,12 +18,11 @@ from dataclasses import dataclass
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-# from nanochat.common import get_dist_info, print0
+from zangchat.common import get_dist_info, print0
 # from nanochat.muon import Muon, DistMuon
 # from nanochat.adamw import DistAdamW
 
-class GPT_Config:
+class GPTConfig:
     sequence_len :int =1024
     vocab_size :int = 50304
     n_head :int = 6
