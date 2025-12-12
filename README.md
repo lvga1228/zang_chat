@@ -1,8 +1,9 @@
-# zang_chat
+
 
 <p align="center">
   <img src="./banner.jpg" width="800">
 </p>
+
 ## it is just a nanochat/GPT only to please myself,several skills learned from nanochat by Carpathy
 
 
